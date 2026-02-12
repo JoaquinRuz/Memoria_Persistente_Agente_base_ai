@@ -1,0 +1,56 @@
+# ============================================
+# Base_AI - .gitignore
+# ============================================
+
+# ------------------------------------------
+# Archivos personales del usuario
+# La carpeta usuario/ contiene datos privados
+# (identidad, contexto de negocio, proyectos).
+# Solo se versionan el README y los templates.
+# ------------------------------------------
+usuario/*
+!usuario/README.md
+!usuario/*.template.md
+
+# ------------------------------------------
+# OS generated files
+# ------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ------------------------------------------
+# IDE / Editor
+# ------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ------------------------------------------
+# Python
+# ------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.env
+.env.local
+
+# ------------------------------------------
+# Node
+# ------------------------------------------
+node_modules/
+npm-debug.log*
+
+# ------------------------------------------
+# Temp files
+# ------------------------------------------
+*.tmp
+*.temp
+*.log

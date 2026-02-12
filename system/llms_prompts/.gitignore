@@ -1,0 +1,64 @@
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~
+
+# Directorios temporales
+/tmp/
+/temp/
+*.import/
+
+# Sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDEs y editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Node.js (si se usan scripts Node)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Python (si se usan scripts Python)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Archivos de importación temporal
+/tmp/llms_prompts_import_*/
+
+# Archivos de respaldo
+*.bak
+*.backup
+*~
+
+# Archivos de configuración local
+.env
+.env.local
+*.local
+
+# Archivos de índice generados (opcional - descomentar si no quieres versionar INDEX.json)
+# INDEX.json

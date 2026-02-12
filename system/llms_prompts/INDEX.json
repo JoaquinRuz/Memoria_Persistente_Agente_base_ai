@@ -1,0 +1,2073 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-23",
+  "systemPrompts": {
+    "Amp": {
+      "path": "system-prompts/Amp/",
+      "files": [
+        {
+          "name": "README.md",
+          "path": "system-prompts/Amp/README.md",
+          "size": 614,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "claude-4-sonnet.yaml",
+          "path": "system-prompts/Amp/claude-4-sonnet.yaml",
+          "size": 66230,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "gpt-5.yaml",
+          "path": "system-prompts/Amp/gpt-5.yaml",
+          "size": 62239,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "view-thread-yaml.png",
+          "path": "system-prompts/Amp/view-thread-yaml.png",
+          "size": 37173,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Amp",
+      "fileCount": 4
+    },
+    "Anthropic": {
+      "path": "system-prompts/Anthropic/",
+      "files": [
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Anthropic/Claude Code/Prompt.txt",
+          "size": 13019,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Tools.json",
+          "path": "system-prompts/Anthropic/Claude Code/Tools.json",
+          "size": 48962,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Claude Code 2.0.txt",
+          "path": "system-prompts/Anthropic/Claude Code 2.0.txt",
+          "size": 57324,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Anthropic/Claude for Chrome/Prompt.txt",
+          "size": 43595,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Tools.json",
+          "path": "system-prompts/Anthropic/Claude for Chrome/Tools.json",
+          "size": 24056,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Sonnet 4.5 Prompt.txt",
+          "path": "system-prompts/Anthropic/Sonnet 4.5 Prompt.txt",
+          "size": 43200,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Anthropic",
+      "fileCount": 6
+    },
+    "Augment-Code": {
+      "path": "system-prompts/Augment-Code/",
+      "files": [
+        {
+          "name": "claude-4-sonnet-agent-prompts.txt",
+          "path": "system-prompts/Augment-Code/claude-4-sonnet-agent-prompts.txt",
+          "size": 10836,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "claude-4-sonnet-tools.json",
+          "path": "system-prompts/Augment-Code/claude-4-sonnet-tools.json",
+          "size": 28992,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "gpt-5-agent-prompts.txt",
+          "path": "system-prompts/Augment-Code/gpt-5-agent-prompts.txt",
+          "size": 15035,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "gpt-5-tools.json",
+          "path": "system-prompts/Augment-Code/gpt-5-tools.json",
+          "size": 19181,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Augment-Code",
+      "fileCount": 4
+    },
+    "Cluely": {
+      "path": "system-prompts/Cluely/",
+      "files": [
+        {
+          "name": "Default Prompt.txt",
+          "path": "system-prompts/Cluely/Default Prompt.txt",
+          "size": 4534,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Enterprise Prompt.txt",
+          "path": "system-prompts/Cluely/Enterprise Prompt.txt",
+          "size": 21306,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Cluely",
+      "fileCount": 2
+    },
+    "CodeBuddy": {
+      "path": "system-prompts/CodeBuddy/",
+      "files": [
+        {
+          "name": "Chat Prompt.txt",
+          "path": "system-prompts/CodeBuddy/Chat Prompt.txt",
+          "size": 1558,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Craft Prompt.txt",
+          "path": "system-prompts/CodeBuddy/Craft Prompt.txt",
+          "size": 40617,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de CodeBuddy",
+      "fileCount": 2
+    },
+    "Comet": {
+      "path": "system-prompts/Comet/",
+      "files": [
+        {
+          "name": "System Prompt.txt",
+          "path": "system-prompts/Comet/System Prompt.txt",
+          "size": 20890,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Comet",
+      "fileCount": 1
+    },
+    "Cursor": {
+      "path": "system-prompts/Cursor/",
+      "files": [
+        {
+          "name": "Agent CLI Prompt 2025-08-07.txt",
+          "path": "system-prompts/Cursor/Agent CLI Prompt 2025-08-07.txt",
+          "size": 14067,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Agent Prompt 2.0.txt",
+          "path": "system-prompts/Cursor/Agent Prompt 2.0.txt",
+          "size": 38844,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Agent Prompt 2025-09-03.txt",
+          "path": "system-prompts/Cursor/Agent Prompt 2025-09-03.txt",
+          "size": 19028,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Agent Prompt v1.0.txt",
+          "path": "system-prompts/Cursor/Agent Prompt v1.0.txt",
+          "size": 9023,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Agent Prompt v1.2.txt",
+          "path": "system-prompts/Cursor/Agent Prompt v1.2.txt",
+          "size": 32197,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Agent Tools v1.0.json",
+          "path": "system-prompts/Cursor/Agent Tools v1.0.json",
+          "size": 23545,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Chat Prompt.txt",
+          "path": "system-prompts/Cursor/Chat Prompt.txt",
+          "size": 12569,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Cursor",
+      "fileCount": 7
+    },
+    "Devin-AI": {
+      "path": "system-prompts/Devin-AI/",
+      "files": [
+        {
+          "name": "DeepWiki Prompt.txt",
+          "path": "system-prompts/Devin-AI/DeepWiki Prompt.txt",
+          "size": 5505,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Devin-AI/Prompt.txt",
+          "size": 34714,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Devin-AI",
+      "fileCount": 2
+    },
+    "Emergent": {
+      "path": "system-prompts/Emergent/",
+      "files": [
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Emergent/Prompt.txt",
+          "size": 37424,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Tools.json",
+          "path": "system-prompts/Emergent/Tools.json",
+          "size": 7880,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Emergent",
+      "fileCount": 2
+    },
+    "Google": {
+      "path": "system-prompts/Google/",
+      "files": [
+        {
+          "name": "Fast Prompt.txt",
+          "path": "system-prompts/Google/Antigravity/Fast Prompt.txt",
+          "size": 40995,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "planning-mode.txt",
+          "path": "system-prompts/Google/Antigravity/planning-mode.txt",
+          "size": 22325,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "AI Studio vibe-coder.txt",
+          "path": "system-prompts/Google/Gemini/AI Studio vibe-coder.txt",
+          "size": 62552,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Google",
+      "fileCount": 3
+    },
+    "Junie": {
+      "path": "system-prompts/Junie/",
+      "files": [
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Junie/Prompt.txt",
+          "size": 6184,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Junie",
+      "fileCount": 1
+    },
+    "Kiro": {
+      "path": "system-prompts/Kiro/",
+      "files": [
+        {
+          "name": "Mode_Clasifier_Prompt.txt",
+          "path": "system-prompts/Kiro/Mode_Clasifier_Prompt.txt",
+          "size": 2883,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Spec_Prompt.txt",
+          "path": "system-prompts/Kiro/Spec_Prompt.txt",
+          "size": 31947,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Vibe_Prompt.txt",
+          "path": "system-prompts/Kiro/Vibe_Prompt.txt",
+          "size": 14151,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Kiro",
+      "fileCount": 3
+    },
+    "Leap.new": {
+      "path": "system-prompts/Leap.new/",
+      "files": [
+        {
+          "name": "Prompts.txt",
+          "path": "system-prompts/Leap.new/Prompts.txt",
+          "size": 52456,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "tools.json",
+          "path": "system-prompts/Leap.new/tools.json",
+          "size": 16553,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Leap.new",
+      "fileCount": 2
+    },
+    "Lovable": {
+      "path": "system-prompts/Lovable/",
+      "files": [
+        {
+          "name": "Agent Prompt.txt",
+          "path": "system-prompts/Lovable/Agent Prompt.txt",
+          "size": 20301,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Agent Tools.json",
+          "path": "system-prompts/Lovable/Agent Tools.json",
+          "size": 27944,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Lovable",
+      "fileCount": 2
+    },
+    "Manus": {
+      "path": "system-prompts/Manus/",
+      "files": [
+        {
+          "name": "Agent loop.txt",
+          "path": "system-prompts/Manus/Agent loop.txt",
+          "size": 2147,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Modules.txt",
+          "path": "system-prompts/Manus/Modules.txt",
+          "size": 12224,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Manus/Prompt.txt",
+          "size": 10209,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "tools.json",
+          "path": "system-prompts/Manus/tools.json",
+          "size": 18501,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Manus",
+      "fileCount": 4
+    },
+    "NotionAI": {
+      "path": "system-prompts/NotionAI/",
+      "files": [
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/NotionAI/Prompt.txt",
+          "size": 32081,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "tools.json",
+          "path": "system-prompts/NotionAI/tools.json",
+          "size": 34889,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de NotionAI",
+      "fileCount": 2
+    },
+    "Open-Source": {
+      "path": "system-prompts/Open-Source/",
+      "files": [
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Open-Source/Bolt/Prompt.txt",
+          "size": 21945,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Open-Source/Cline/Prompt.txt",
+          "size": 47083,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Open-Source/Codex CLI/Prompt.txt",
+          "size": 4848,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "openai-codex-cli-system-prompt-20250820.txt",
+          "path": "system-prompts/Open-Source/Codex CLI/openai-codex-cli-system-prompt-20250820.txt",
+          "size": 23864,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "google-gemini-cli-system-prompt.txt",
+          "path": "system-prompts/Open-Source/Gemini CLI/google-gemini-cli-system-prompt.txt",
+          "size": 18976,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Open-Source/Lumo/Prompt.txt",
+          "size": 8253,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Open-Source/RooCode/Prompt.txt",
+          "size": 43961,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Open-Source",
+      "fileCount": 7
+    },
+    "Orchids": {
+      "path": "system-prompts/Orchids/",
+      "files": [
+        {
+          "name": "Decision-making prompt.txt",
+          "path": "system-prompts/Orchids/Decision-making prompt.txt",
+          "size": 6820,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "System Prompt.txt",
+          "path": "system-prompts/Orchids/System Prompt.txt",
+          "size": 58779,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Orchids",
+      "fileCount": 2
+    },
+    "Perplexity": {
+      "path": "system-prompts/Perplexity/",
+      "files": [
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Perplexity/Prompt.txt",
+          "size": 9585,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Perplexity",
+      "fileCount": 1
+    },
+    "Poke": {
+      "path": "system-prompts/Poke/",
+      "files": [
+        {
+          "name": "Poke agent.txt",
+          "path": "system-prompts/Poke/Poke agent.txt",
+          "size": 12159,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Poke_p1.txt",
+          "path": "system-prompts/Poke/Poke_p1.txt",
+          "size": 10153,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Poke_p2.txt",
+          "path": "system-prompts/Poke/Poke_p2.txt",
+          "size": 2440,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Poke_p3.txt",
+          "path": "system-prompts/Poke/Poke_p3.txt",
+          "size": 5493,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Poke_p4.txt",
+          "path": "system-prompts/Poke/Poke_p4.txt",
+          "size": 5890,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Poke_p5.txt",
+          "path": "system-prompts/Poke/Poke_p5.txt",
+          "size": 1158,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Poke_p6.txt",
+          "path": "system-prompts/Poke/Poke_p6.txt",
+          "size": 1783,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Poke",
+      "fileCount": 7
+    },
+    "Qoder": {
+      "path": "system-prompts/Qoder/",
+      "files": [
+        {
+          "name": "Quest Action.txt",
+          "path": "system-prompts/Qoder/Quest Action.txt",
+          "size": 12357,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Quest Design.txt",
+          "path": "system-prompts/Qoder/Quest Design.txt",
+          "size": 26165,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "prompt.txt",
+          "path": "system-prompts/Qoder/prompt.txt",
+          "size": 18620,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Qoder",
+      "fileCount": 3
+    },
+    "Replit": {
+      "path": "system-prompts/Replit/",
+      "files": [
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Replit/Prompt.txt",
+          "size": 8110,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Tools.json",
+          "path": "system-prompts/Replit/Tools.json",
+          "size": 25003,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Replit",
+      "fileCount": 2
+    },
+    "Same-dev": {
+      "path": "system-prompts/Same-dev/",
+      "files": [
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Same-dev/Prompt.txt",
+          "size": 34890,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Tools.json",
+          "path": "system-prompts/Same-dev/Tools.json",
+          "size": 22357,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Same-dev",
+      "fileCount": 2
+    },
+    "Trae": {
+      "path": "system-prompts/Trae/",
+      "files": [
+        {
+          "name": "Builder Prompt.txt",
+          "path": "system-prompts/Trae/Builder Prompt.txt",
+          "size": 18569,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Builder Tools.json",
+          "path": "system-prompts/Trae/Builder Tools.json",
+          "size": 8264,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Chat Prompt.txt",
+          "path": "system-prompts/Trae/Chat Prompt.txt",
+          "size": 8443,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Trae",
+      "fileCount": 3
+    },
+    "Traycer AI": {
+      "path": "system-prompts/Traycer AI/",
+      "files": [
+        {
+          "name": "phase_mode_prompts.txt",
+          "path": "system-prompts/Traycer AI/phase_mode_prompts.txt",
+          "size": 3842,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "phase_mode_tools.json",
+          "path": "system-prompts/Traycer AI/phase_mode_tools.json",
+          "size": 18618,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "plan_mode_prompts",
+          "path": "system-prompts/Traycer AI/plan_mode_prompts",
+          "size": 6143,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "plan_mode_tools.json",
+          "path": "system-prompts/Traycer AI/plan_mode_tools.json",
+          "size": 16752,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Traycer AI",
+      "fileCount": 4
+    },
+    "VSCode-Agent": {
+      "path": "system-prompts/VSCode-Agent/",
+      "files": [
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/VSCode-Agent/Prompt.txt",
+          "size": 21032,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "chat-titles.txt",
+          "path": "system-prompts/VSCode-Agent/chat-titles.txt",
+          "size": 765,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "claude-sonnet-4.txt",
+          "path": "system-prompts/VSCode-Agent/claude-sonnet-4.txt",
+          "size": 9910,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "gemini-2.5-pro.txt",
+          "path": "system-prompts/VSCode-Agent/gemini-2.5-pro.txt",
+          "size": 9909,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "gpt-4.1.txt",
+          "path": "system-prompts/VSCode-Agent/gpt-4.1.txt",
+          "size": 11082,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "gpt-4o.txt",
+          "path": "system-prompts/VSCode-Agent/gpt-4o.txt",
+          "size": 7876,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "gpt-5-mini.txt",
+          "path": "system-prompts/VSCode-Agent/gpt-5-mini.txt",
+          "size": 25257,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "gpt-5.txt",
+          "path": "system-prompts/VSCode-Agent/gpt-5.txt",
+          "size": 25579,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "nes-tab-completion.txt",
+          "path": "system-prompts/VSCode-Agent/nes-tab-completion.txt",
+          "size": 8910,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de VSCode-Agent",
+      "fileCount": 9
+    },
+    "Warp": {
+      "path": "system-prompts/Warp/",
+      "files": [
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/Warp/Prompt.txt",
+          "size": 14595,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Warp",
+      "fileCount": 1
+    },
+    "Windsurf": {
+      "path": "system-prompts/Windsurf/",
+      "files": [
+        {
+          "name": "Prompt Wave 11.txt",
+          "path": "system-prompts/Windsurf/Prompt Wave 11.txt",
+          "size": 11699,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Tools Wave 11.txt",
+          "path": "system-prompts/Windsurf/Tools Wave 11.txt",
+          "size": 32843,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Windsurf",
+      "fileCount": 2
+    },
+    "Xcode": {
+      "path": "system-prompts/Xcode/",
+      "files": [
+        {
+          "name": "DocumentAction.txt",
+          "path": "system-prompts/Xcode/DocumentAction.txt",
+          "size": 374,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "ExplainAction.txt",
+          "path": "system-prompts/Xcode/ExplainAction.txt",
+          "size": 245,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "MessageAction.txt",
+          "path": "system-prompts/Xcode/MessageAction.txt",
+          "size": 235,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "PlaygroundAction.txt",
+          "path": "system-prompts/Xcode/PlaygroundAction.txt",
+          "size": 414,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "PreviewAction.txt",
+          "path": "system-prompts/Xcode/PreviewAction.txt",
+          "size": 1938,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "System.txt",
+          "path": "system-prompts/Xcode/System.txt",
+          "size": 4009,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Xcode",
+      "fileCount": 6
+    },
+    "Z-ai-Code": {
+      "path": "system-prompts/Z-ai-Code/",
+      "files": [
+        {
+          "name": "prompt.txt",
+          "path": "system-prompts/Z-ai-Code/prompt.txt",
+          "size": 9592,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de Z-ai-Code",
+      "fileCount": 1
+    },
+    "v0": {
+      "path": "system-prompts/v0/",
+      "files": [
+        {
+          "name": "Prompt.txt",
+          "path": "system-prompts/v0/Prompt.txt",
+          "size": 43864,
+          "modified": "2026-01-23T16:32:37.000Z"
+        },
+        {
+          "name": "Tools.json",
+          "path": "system-prompts/v0/Tools.json",
+          "size": 28966,
+          "modified": "2026-01-23T16:32:37.000Z"
+        }
+      ],
+      "description": "System prompts de v0",
+      "fileCount": 2
+    }
+  },
+  "claudeSkills": {
+    "Business": {
+      "brand-guidelines": {
+        "path": "claude-skills/Business/brand-guidelines/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "LICENSE.txt",
+            "path": "claude-skills/Business/brand-guidelines/LICENSE.txt",
+            "size": 11357,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Business/brand-guidelines/SKILL.md",
+            "size": 2235,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 2
+      },
+      "competitive-ads-extractor": {
+        "path": "claude-skills/Business/competitive-ads-extractor/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Business/competitive-ads-extractor/SKILL.md",
+            "size": 7912,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "domain-name-brainstormer": {
+        "path": "claude-skills/Business/domain-name-brainstormer/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Business/domain-name-brainstormer/SKILL.md",
+            "size": 5696,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "internal-comms": {
+        "path": "claude-skills/Business/internal-comms/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "LICENSE.txt",
+            "path": "claude-skills/Business/internal-comms/LICENSE.txt",
+            "size": 11357,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Business/internal-comms/SKILL.md",
+            "size": 1511,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "3p-updates.md",
+            "path": "claude-skills/Business/internal-comms/examples/3p-updates.md",
+            "size": 3274,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "company-newsletter.md",
+            "path": "claude-skills/Business/internal-comms/examples/company-newsletter.md",
+            "size": 3295,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "faq-answers.md",
+            "path": "claude-skills/Business/internal-comms/examples/faq-answers.md",
+            "size": 2366,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "general-comms.md",
+            "path": "claude-skills/Business/internal-comms/examples/general-comms.md",
+            "size": 602,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 6
+      },
+      "lead-research-assistant": {
+        "path": "claude-skills/Business/lead-research-assistant/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Business/lead-research-assistant/SKILL.md",
+            "size": 6587,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      }
+    },
+    "Communication": {
+      "content-research-writer": {
+        "path": "claude-skills/Communication/content-research-writer/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Communication/content-research-writer/SKILL.md",
+            "size": 14244,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "meeting-insights-analyzer": {
+        "path": "claude-skills/Communication/meeting-insights-analyzer/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Communication/meeting-insights-analyzer/SKILL.md",
+            "size": 10177,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      }
+    },
+    "Creative": {
+      "canvas-design": {
+        "path": "claude-skills/Creative/canvas-design/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "LICENSE.txt",
+            "path": "claude-skills/Creative/canvas-design/LICENSE.txt",
+            "size": 11357,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Creative/canvas-design/SKILL.md",
+            "size": 11939,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "ArsenalSC-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/ArsenalSC-OFL.txt",
+            "size": 4373,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "ArsenalSC-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/ArsenalSC-Regular.ttf",
+            "size": 165848,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "BigShoulders-Bold.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/BigShoulders-Bold.ttf",
+            "size": 94528,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "BigShoulders-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/BigShoulders-OFL.txt",
+            "size": 4397,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "BigShoulders-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/BigShoulders-Regular.ttf",
+            "size": 94396,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Boldonse-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Boldonse-OFL.txt",
+            "size": 4390,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Boldonse-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Boldonse-Regular.ttf",
+            "size": 77168,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "BricolageGrotesque-Bold.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/BricolageGrotesque-Bold.ttf",
+            "size": 90952,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "BricolageGrotesque-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/BricolageGrotesque-OFL.txt",
+            "size": 4403,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "BricolageGrotesque-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/BricolageGrotesque-Regular.ttf",
+            "size": 90920,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "CrimsonPro-Bold.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/CrimsonPro-Bold.ttf",
+            "size": 107352,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "CrimsonPro-Italic.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/CrimsonPro-Italic.ttf",
+            "size": 108828,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "CrimsonPro-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/CrimsonPro-OFL.txt",
+            "size": 4394,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "CrimsonPro-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/CrimsonPro-Regular.ttf",
+            "size": 106696,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "DMMono-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/DMMono-OFL.txt",
+            "size": 4392,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "DMMono-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/DMMono-Regular.ttf",
+            "size": 48852,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "EricaOne-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/EricaOne-OFL.txt",
+            "size": 4410,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "EricaOne-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/EricaOne-Regular.ttf",
+            "size": 24872,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "GeistMono-Bold.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/GeistMono-Bold.ttf",
+            "size": 78304,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "GeistMono-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/GeistMono-OFL.txt",
+            "size": 4388,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "GeistMono-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/GeistMono-Regular.ttf",
+            "size": 78232,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Gloock-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Gloock-OFL.txt",
+            "size": 4381,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Gloock-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Gloock-Regular.ttf",
+            "size": 95156,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "IBMPlexMono-Bold.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/IBMPlexMono-Bold.ttf",
+            "size": 136008,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "IBMPlexMono-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/IBMPlexMono-OFL.txt",
+            "size": 4363,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "IBMPlexMono-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/IBMPlexMono-Regular.ttf",
+            "size": 133796,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "IBMPlexSerif-Bold.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/IBMPlexSerif-Bold.ttf",
+            "size": 161000,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "IBMPlexSerif-BoldItalic.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/IBMPlexSerif-BoldItalic.ttf",
+            "size": 169840,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "IBMPlexSerif-Italic.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/IBMPlexSerif-Italic.ttf",
+            "size": 170004,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "IBMPlexSerif-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/IBMPlexSerif-Regular.ttf",
+            "size": 160380,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "InstrumentSans-Bold.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/InstrumentSans-Bold.ttf",
+            "size": 68084,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "InstrumentSans-BoldItalic.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/InstrumentSans-BoldItalic.ttf",
+            "size": 70004,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "InstrumentSans-Italic.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/InstrumentSans-Italic.ttf",
+            "size": 69900,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "InstrumentSans-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/InstrumentSans-OFL.txt",
+            "size": 4403,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "InstrumentSans-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/InstrumentSans-Regular.ttf",
+            "size": 68028,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "InstrumentSerif-Italic.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/InstrumentSerif-Italic.ttf",
+            "size": 70868,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "InstrumentSerif-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/InstrumentSerif-Regular.ttf",
+            "size": 69312,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Italiana-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Italiana-OFL.txt",
+            "size": 4394,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Italiana-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Italiana-Regular.ttf",
+            "size": 27184,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "JetBrainsMono-Bold.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/JetBrainsMono-Bold.ttf",
+            "size": 114828,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "JetBrainsMono-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/JetBrainsMono-OFL.txt",
+            "size": 4399,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "JetBrainsMono-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/JetBrainsMono-Regular.ttf",
+            "size": 114904,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Jura-Light.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Jura-Light.ttf",
+            "size": 154308,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Jura-Medium.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Jura-Medium.ttf",
+            "size": 154488,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Jura-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Jura-OFL.txt",
+            "size": 4380,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "LibreBaskerville-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/LibreBaskerville-OFL.txt",
+            "size": 4449,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "LibreBaskerville-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/LibreBaskerville-Regular.ttf",
+            "size": 147584,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Lora-Bold.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Lora-Bold.ttf",
+            "size": 133828,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Lora-BoldItalic.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Lora-BoldItalic.ttf",
+            "size": 140332,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Lora-Italic.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Lora-Italic.ttf",
+            "size": 139328,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Lora-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Lora-OFL.txt",
+            "size": 4423,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Lora-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Lora-Regular.ttf",
+            "size": 133888,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "NationalPark-Bold.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/NationalPark-Bold.ttf",
+            "size": 79208,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "NationalPark-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/NationalPark-OFL.txt",
+            "size": 4399,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "NationalPark-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/NationalPark-Regular.ttf",
+            "size": 76424,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "NothingYouCouldDo-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/NothingYouCouldDo-OFL.txt",
+            "size": 4363,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "NothingYouCouldDo-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/NothingYouCouldDo-Regular.ttf",
+            "size": 32020,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Outfit-Bold.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Outfit-Bold.ttf",
+            "size": 55392,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Outfit-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Outfit-OFL.txt",
+            "size": 4389,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Outfit-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Outfit-Regular.ttf",
+            "size": 54912,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "PixelifySans-Medium.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/PixelifySans-Medium.ttf",
+            "size": 51072,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "PixelifySans-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/PixelifySans-OFL.txt",
+            "size": 4395,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "PoiretOne-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/PoiretOne-OFL.txt",
+            "size": 4366,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "PoiretOne-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/PoiretOne-Regular.ttf",
+            "size": 45244,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "RedHatMono-Bold.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/RedHatMono-Bold.ttf",
+            "size": 34420,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "RedHatMono-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/RedHatMono-OFL.txt",
+            "size": 4394,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "RedHatMono-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/RedHatMono-Regular.ttf",
+            "size": 34488,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Silkscreen-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Silkscreen-OFL.txt",
+            "size": 4394,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Silkscreen-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Silkscreen-Regular.ttf",
+            "size": 31960,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "SmoochSans-Medium.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/SmoochSans-Medium.ttf",
+            "size": 59704,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "SmoochSans-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/SmoochSans-OFL.txt",
+            "size": 4396,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Tektur-Medium.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Tektur-Medium.ttf",
+            "size": 76248,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Tektur-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Tektur-OFL.txt",
+            "size": 4385,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "Tektur-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/Tektur-Regular.ttf",
+            "size": 75604,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "WorkSans-Bold.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/WorkSans-Bold.ttf",
+            "size": 191304,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "WorkSans-BoldItalic.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/WorkSans-BoldItalic.ttf",
+            "size": 175772,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "WorkSans-Italic.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/WorkSans-Italic.ttf",
+            "size": 174280,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "WorkSans-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/WorkSans-OFL.txt",
+            "size": 4397,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "WorkSans-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/WorkSans-Regular.ttf",
+            "size": 188916,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "YoungSerif-OFL.txt",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/YoungSerif-OFL.txt",
+            "size": 4398,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "YoungSerif-Regular.ttf",
+            "path": "claude-skills/Creative/canvas-design/canvas-fonts/YoungSerif-Regular.ttf",
+            "size": 105136,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 83
+      },
+      "image-enhancer": {
+        "path": "claude-skills/Creative/image-enhancer/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Creative/image-enhancer/SKILL.md",
+            "size": 2540,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "slack-gif-creator": {
+        "path": "claude-skills/Creative/slack-gif-creator/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "LICENSE.txt",
+            "path": "claude-skills/Creative/slack-gif-creator/LICENSE.txt",
+            "size": 11357,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Creative/slack-gif-creator/SKILL.md",
+            "size": 17142,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "color_palettes.py",
+            "path": "claude-skills/Creative/slack-gif-creator/core/color_palettes.py",
+            "size": 8724,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "easing.py",
+            "path": "claude-skills/Creative/slack-gif-creator/core/easing.py",
+            "size": 6289,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "frame_composer.py",
+            "path": "claude-skills/Creative/slack-gif-creator/core/frame_composer.py",
+            "size": 14468,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "gif_builder.py",
+            "path": "claude-skills/Creative/slack-gif-creator/core/gif_builder.py",
+            "size": 9565,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "typography.py",
+            "path": "claude-skills/Creative/slack-gif-creator/core/typography.py",
+            "size": 10761,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "validators.py",
+            "path": "claude-skills/Creative/slack-gif-creator/core/validators.py",
+            "size": 8225,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "visual_effects.py",
+            "path": "claude-skills/Creative/slack-gif-creator/core/visual_effects.py",
+            "size": 14862,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "requirements.txt",
+            "path": "claude-skills/Creative/slack-gif-creator/requirements.txt",
+            "size": 66,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "bounce.py",
+            "path": "claude-skills/Creative/slack-gif-creator/templates/bounce.py",
+            "size": 3055,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "explode.py",
+            "path": "claude-skills/Creative/slack-gif-creator/templates/explode.py",
+            "size": 11259,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "fade.py",
+            "path": "claude-skills/Creative/slack-gif-creator/templates/fade.py",
+            "size": 10143,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "flip.py",
+            "path": "claude-skills/Creative/slack-gif-creator/templates/flip.py",
+            "size": 9458,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "kaleidoscope.py",
+            "path": "claude-skills/Creative/slack-gif-creator/templates/kaleidoscope.py",
+            "size": 6349,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "morph.py",
+            "path": "claude-skills/Creative/slack-gif-creator/templates/morph.py",
+            "size": 11241,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "move.py",
+            "path": "claude-skills/Creative/slack-gif-creator/templates/move.py",
+            "size": 9395,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "pulse.py",
+            "path": "claude-skills/Creative/slack-gif-creator/templates/pulse.py",
+            "size": 8638,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "shake.py",
+            "path": "claude-skills/Creative/slack-gif-creator/templates/shake.py",
+            "size": 3737,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "slide.py",
+            "path": "claude-skills/Creative/slack-gif-creator/templates/slide.py",
+            "size": 9367,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "spin.py",
+            "path": "claude-skills/Creative/slack-gif-creator/templates/spin.py",
+            "size": 9096,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "wiggle.py",
+            "path": "claude-skills/Creative/slack-gif-creator/templates/wiggle.py",
+            "size": 10060,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "zoom.py",
+            "path": "claude-skills/Creative/slack-gif-creator/templates/zoom.py",
+            "size": 10111,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 23
+      },
+      "theme-factory": {
+        "path": "claude-skills/Creative/theme-factory/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "LICENSE.txt",
+            "path": "claude-skills/Creative/theme-factory/LICENSE.txt",
+            "size": 11357,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Creative/theme-factory/SKILL.md",
+            "size": 3124,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "theme-showcase.pdf",
+            "path": "claude-skills/Creative/theme-factory/theme-showcase.pdf",
+            "size": 124310,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "arctic-frost.md",
+            "path": "claude-skills/Creative/theme-factory/themes/arctic-frost.md",
+            "size": 544,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "botanical-garden.md",
+            "path": "claude-skills/Creative/theme-factory/themes/botanical-garden.md",
+            "size": 519,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "desert-rose.md",
+            "path": "claude-skills/Creative/theme-factory/themes/desert-rose.md",
+            "size": 496,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "forest-canopy.md",
+            "path": "claude-skills/Creative/theme-factory/themes/forest-canopy.md",
+            "size": 506,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "golden-hour.md",
+            "path": "claude-skills/Creative/theme-factory/themes/golden-hour.md",
+            "size": 528,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "midnight-galaxy.md",
+            "path": "claude-skills/Creative/theme-factory/themes/midnight-galaxy.md",
+            "size": 513,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "modern-minimalist.md",
+            "path": "claude-skills/Creative/theme-factory/themes/modern-minimalist.md",
+            "size": 549,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "ocean-depths.md",
+            "path": "claude-skills/Creative/theme-factory/themes/ocean-depths.md",
+            "size": 555,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "sunset-boulevard.md",
+            "path": "claude-skills/Creative/theme-factory/themes/sunset-boulevard.md",
+            "size": 558,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "tech-innovation.md",
+            "path": "claude-skills/Creative/theme-factory/themes/tech-innovation.md",
+            "size": 547,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 13
+      },
+      "video-downloader": {
+        "path": "claude-skills/Creative/video-downloader/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Creative/video-downloader/SKILL.md",
+            "size": 2671,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "download_video.py",
+            "path": "claude-skills/Creative/video-downloader/scripts/download_video.py",
+            "size": 4278,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 2
+      }
+    },
+    "Development": {
+      "artifacts-builder": {
+        "path": "claude-skills/Development/artifacts-builder/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "LICENSE.txt",
+            "path": "claude-skills/Development/artifacts-builder/LICENSE.txt",
+            "size": 11357,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Development/artifacts-builder/SKILL.md",
+            "size": 3079,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "bundle-artifact.sh",
+            "path": "claude-skills/Development/artifacts-builder/scripts/bundle-artifact.sh",
+            "size": 1517,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "init-artifact.sh",
+            "path": "claude-skills/Development/artifacts-builder/scripts/init-artifact.sh",
+            "size": 9924,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "shadcn-components.tar.gz",
+            "path": "claude-skills/Development/artifacts-builder/scripts/shadcn-components.tar.gz",
+            "size": 19967,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 5
+      },
+      "changelog-generator": {
+        "path": "claude-skills/Development/changelog-generator/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Development/changelog-generator/SKILL.md",
+            "size": 3096,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "connect": {
+        "path": "claude-skills/Development/connect/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Development/connect/SKILL.md",
+            "size": 3953,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "connect-apps": {
+        "path": "claude-skills/Development/connect-apps/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Development/connect-apps/SKILL.md",
+            "size": 2231,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "developer-growth-analysis": {
+        "path": "claude-skills/Development/developer-growth-analysis/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Development/developer-growth-analysis/SKILL.md",
+            "size": 15720,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "langsmith-fetch": {
+        "path": "claude-skills/Development/langsmith-fetch/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Development/langsmith-fetch/SKILL.md",
+            "size": 10922,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "mcp-builder": {
+        "path": "claude-skills/Development/mcp-builder/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "LICENSE.txt",
+            "path": "claude-skills/Development/mcp-builder/LICENSE.txt",
+            "size": 11357,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Development/mcp-builder/SKILL.md",
+            "size": 13552,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "evaluation.md",
+            "path": "claude-skills/Development/mcp-builder/reference/evaluation.md",
+            "size": 21663,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "mcp_best_practices.md",
+            "path": "claude-skills/Development/mcp-builder/reference/mcp_best_practices.md",
+            "size": 28910,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "node_mcp_server.md",
+            "path": "claude-skills/Development/mcp-builder/reference/node_mcp_server.md",
+            "size": 26709,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "python_mcp_server.md",
+            "path": "claude-skills/Development/mcp-builder/reference/python_mcp_server.md",
+            "size": 26182,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "connections.py",
+            "path": "claude-skills/Development/mcp-builder/scripts/connections.py",
+            "size": 4875,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "evaluation.py",
+            "path": "claude-skills/Development/mcp-builder/scripts/evaluation.py",
+            "size": 12579,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "example_evaluation.xml",
+            "path": "claude-skills/Development/mcp-builder/scripts/example_evaluation.xml",
+            "size": 1194,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "requirements.txt",
+            "path": "claude-skills/Development/mcp-builder/scripts/requirements.txt",
+            "size": 29,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 10
+      },
+      "skill-creator": {
+        "path": "claude-skills/Development/skill-creator/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "LICENSE.txt",
+            "path": "claude-skills/Development/skill-creator/LICENSE.txt",
+            "size": 11357,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Development/skill-creator/SKILL.md",
+            "size": 11547,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "init_skill.py",
+            "path": "claude-skills/Development/skill-creator/scripts/init_skill.py",
+            "size": 10863,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "package_skill.py",
+            "path": "claude-skills/Development/skill-creator/scripts/package_skill.py",
+            "size": 3247,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "quick_validate.py",
+            "path": "claude-skills/Development/skill-creator/scripts/quick_validate.py",
+            "size": 2165,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 5
+      },
+      "skill-share": {
+        "path": "claude-skills/Development/skill-share/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Development/skill-share/SKILL.md",
+            "size": 2913,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "tailored-resume-generator": {
+        "path": "claude-skills/Development/tailored-resume-generator/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Development/tailored-resume-generator/SKILL.md",
+            "size": 12408,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "template-skill": {
+        "path": "claude-skills/Development/template-skill/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Development/template-skill/SKILL.md",
+            "size": 140,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "twitter-algorithm-optimizer": {
+        "path": "claude-skills/Development/twitter-algorithm-optimizer/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Development/twitter-algorithm-optimizer/SKILL.md",
+            "size": 12932,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "webapp-testing": {
+        "path": "claude-skills/Development/webapp-testing/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "LICENSE.txt",
+            "path": "claude-skills/Development/webapp-testing/LICENSE.txt",
+            "size": 11357,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Development/webapp-testing/SKILL.md",
+            "size": 3913,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "console_logging.py",
+            "path": "claude-skills/Development/webapp-testing/examples/console_logging.py",
+            "size": 1027,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "element_discovery.py",
+            "path": "claude-skills/Development/webapp-testing/examples/element_discovery.py",
+            "size": 1463,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "static_html_automation.py",
+            "path": "claude-skills/Development/webapp-testing/examples/static_html_automation.py",
+            "size": 953,
+            "modified": "2026-01-23T16:32:38.000Z"
+          },
+          {
+            "name": "with_server.py",
+            "path": "claude-skills/Development/webapp-testing/scripts/with_server.py",
+            "size": 3693,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 6
+      }
+    },
+    "Productivity": {
+      "file-organizer": {
+        "path": "claude-skills/Productivity/file-organizer/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Productivity/file-organizer/SKILL.md",
+            "size": 11312,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "invoice-organizer": {
+        "path": "claude-skills/Productivity/invoice-organizer/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Productivity/invoice-organizer/SKILL.md",
+            "size": 12010,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      },
+      "raffle-winner-picker": {
+        "path": "claude-skills/Productivity/raffle-winner-picker/",
+        "mainFile": "SKILL.md",
+        "files": [
+          {
+            "name": "SKILL.md",
+            "path": "claude-skills/Productivity/raffle-winner-picker/SKILL.md",
+            "size": 3796,
+            "modified": "2026-01-23T16:32:38.000Z"
+          }
+        ],
+        "fileCount": 1
+      }
+    }
+  },
+  "generalPrompts": {},
+  "metadata": {
+    "description": "Índice estructurado de todos los prompts en el repositorio",
+    "totalPrompts": 59,
+    "categories": {
+      "system-prompts": 31,
+      "claude-skills": 28,
+      "general-prompts": 0
+    }
+  }
+}
