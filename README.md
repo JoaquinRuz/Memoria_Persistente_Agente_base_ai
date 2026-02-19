@@ -25,8 +25,9 @@ El agente no actúa libremente. **Opera bajo sistema.**
 ## Estructura del Proyecto
 
 ```
-base_ai/
+Memoria_Persistente_Agente_base_ai/    ← Esta carpeta (el repo completo)
 ├── README.md                          ← Este archivo
+├── INICIO_RAPIDO.md                   ← Guía de onboarding paso a paso
 ├── .gitignore
 │
 ├── system/                            ← Kernel del sistema (obligatorio)
