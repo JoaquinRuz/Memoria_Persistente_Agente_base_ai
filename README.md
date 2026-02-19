@@ -87,6 +87,8 @@ Ver [`usuario/README.md`](usuario/README.md) para la estructura completa.
 
 ## Cómo usar
 
+> **Primera vez?** Abre [`INICIO_RAPIDO.md`](INICIO_RAPIDO.md) para una guía paso a paso con setup interactivo.
+
 1. **Clona** el repo
 2. **Configura** tu carpeta `usuario/` (ver instrucciones arriba)
 3. **Carga** los archivos de `system/` como contexto en tu LLM favorito
