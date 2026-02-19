@@ -25,26 +25,35 @@ El agente no actúa libremente. **Opera bajo sistema.**
 ## Estructura del Proyecto
 
 ```
-Memoria_Persistente_Agente_base_ai/    ← Esta carpeta (el repo completo)
-├── README.md                          ← Este archivo
-├── INICIO_RAPIDO.md                   ← Guía de onboarding paso a paso
-├── .gitignore
+Memoria_Persistente_Agente_base_ai/        ← Carpeta principal (arrastra esta carpeta a tu proyecto)
+├── INICIO_RAPIDO.md                       ← Guía de onboarding paso a paso
 │
-├── system/                            ← Kernel del sistema (obligatorio)
-│   ├── instructivo_base.md            ← Boot Sequence y reglas core
-│   ├── llm_operating_rules.md         ← Protocolos ejecutables (CoVe, ReAct, ToT, etc.)
-│   ├── interaction_contract.md        ← Cómo debe comunicarse el agente
-│   ├── instruccion_cloud_cursor.md    ← Protocolo Cloud↔Cursor (orquestación)
-│   └── llms_prompts/                  ← Colección de system prompts y skill packs
-│       ├── claude-skills/             ← Skills organizados por categoría
-│       ├── system-prompts/            ← System prompts de referencia (Cursor, Claude, etc.)
+├── system/                                ← Kernel del sistema (obligatorio)
+│   ├── instructivo_base.md                ← Boot Sequence y reglas core
+│   ├── llm_operating_rules.md             ← Protocolos ejecutables (CoVe, ReAct, ToT, etc.)
+│   ├── interaction_contract.md            ← Cómo debe comunicarse el agente
+│   ├── instruccion_cloud_cursor.md        ← Protocolo Cloud↔Cursor (orquestación)
+│   └── llms_prompts/                      ← Colección de system prompts y skill packs
+│       ├── claude-skills/                 ← Skills organizados por categoría
+│       ├── system-prompts/                ← System prompts de referencia (Cursor, Claude, etc.)
 │       └── ...
 │
-└── usuario/                           ← Contexto personal (NO versionado, ver abajo)
-    ├── README.md                      ← Guía de configuración (versionado)
-    ├── user_identity.template.md      ← Template de identidad (versionado)
+└── usuario/                               ← Contexto personal (NO versionado, ver abajo)
+    ├── README.md                          ← Guía de configuración (versionado)
+    ├── user_identity.template.md          ← Template de identidad (versionado)
     └── ... (archivos personales)
 ```
+
+## Cómo usar
+
+> **Primera vez?** Abre [`Memoria_Persistente_Agente_base_ai/INICIO_RAPIDO.md`](Memoria_Persistente_Agente_base_ai/INICIO_RAPIDO.md) para una guía paso a paso con setup interactivo.
+
+1. **Clona** el repo
+2. **Arrastra** la carpeta `Memoria_Persistente_Agente_base_ai/` a tu proyecto
+3. **Configura** tu carpeta `usuario/` (ver instrucciones en `INICIO_RAPIDO.md`)
+4. **Carga** los archivos de `system/` como contexto en tu LLM favorito
+5. **Inicia sesión** con Context Flags
+6. El agente operará bajo el sistema definido
 
 ## Protocolos Implementados
 
@@ -84,17 +93,7 @@ Para configurar tu propia instancia:
 2. Completa con tu información
 3. Crea los archivos adicionales según tu contexto (business context, proyectos, etc.)
 
-Ver [`usuario/README.md`](usuario/README.md) para la estructura completa.
-
-## Cómo usar
-
-> **Primera vez?** Abre [`INICIO_RAPIDO.md`](INICIO_RAPIDO.md) para una guía paso a paso con setup interactivo.
-
-1. **Clona** el repo
-2. **Configura** tu carpeta `usuario/` (ver instrucciones arriba)
-3. **Carga** los archivos de `system/` como contexto en tu LLM favorito
-4. **Inicia sesión** con Context Flags
-5. El agente operará bajo el sistema definido
+Ver [`usuario/README.md`](Memoria_Persistente_Agente_base_ai/usuario/README.md) para la estructura completa.
 
 ## Colección de Prompts y Skills
 
@@ -117,5 +116,5 @@ Documentación técnica completa en los archivos de `system/`.
 
 ---
 
-**Versión**: 1.0  
+**Versión**: 1.1  
 **Licencia**: MIT

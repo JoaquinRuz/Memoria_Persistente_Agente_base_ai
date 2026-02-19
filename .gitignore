@@ -8,9 +8,9 @@
 # (identidad, contexto de negocio, proyectos).
 # Solo se versionan el README y los templates.
 # ------------------------------------------
-usuario/*
-!usuario/README.md
-!usuario/*.template.md
+Memoria_Persistente_Agente_base_ai/usuario/*
+!Memoria_Persistente_Agente_base_ai/usuario/README.md
+!Memoria_Persistente_Agente_base_ai/usuario/*.template.md
 
 # ------------------------------------------
 # OS generated files
