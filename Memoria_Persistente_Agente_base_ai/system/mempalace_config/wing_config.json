@@ -1,0 +1,29 @@
+{
+  "default_wing": "wing_general",
+  "wings": {
+    "wing_matrix": {
+      "type": "project",
+      "keywords": ["matrix", "agente", "memoria persistente", "sistema operativo", "llm", "cursor"]
+    },
+    "wing_promosmart": {
+      "type": "project",
+      "keywords": ["promosmart", "logistica", "importacion", "china", "embarque", "proveedor", "ventas"]
+    },
+    "wing_financial": {
+      "type": "project",
+      "keywords": ["financial", "finanzas", "inversiones", "portfolio", "trading", "etoro"]
+    },
+    "wing_solefrutti": {
+      "type": "project",
+      "keywords": ["solefrutti", "fruta", "agricola"]
+    },
+    "wing_joaquin": {
+      "type": "person",
+      "keywords": ["joaquin", "jr", "personal", "preferencias", "decisiones personales"]
+    },
+    "wing_orchestration": {
+      "type": "project",
+      "keywords": ["orchestration", "orquestacion", "pipeline", "workflow", "automatizacion"]
+    }
+  }
+}

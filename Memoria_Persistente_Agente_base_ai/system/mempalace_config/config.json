@@ -1,0 +1,20 @@
+{
+  "palace_path": "~/.mempalace/palace",
+  "collection_name": "mempalace_drawers",
+  "topic_wings": [
+    "technical",
+    "business",
+    "decisions",
+    "identity",
+    "creative",
+    "memory"
+  ],
+  "hall_keywords": {
+    "technical": ["code", "python", "script", "bug", "error", "function", "api", "database", "server", "cursor", "typescript", "deploy", "git"],
+    "business": ["promosmart", "ventas", "logistica", "cliente", "producto", "importacion", "proveedor", "china", "embarque"],
+    "decisions": ["decidimos", "decision", "elegimos", "descartamos", "migramos", "cambiamos", "aprobado", "rechazado"],
+    "identity": ["identity", "preferencia", "estilo", "tono", "idioma", "formato", "regla"],
+    "creative": ["diseño", "ui", "ux", "app", "dashboard", "visual", "arte", "layout"],
+    "memory": ["memoria", "remember", "recall", "contexto", "historial", "sesion", "palace"]
+  }
+}

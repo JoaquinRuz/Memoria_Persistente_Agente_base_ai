@@ -1,13 +1,33 @@
 # Base_AI - Inicio Rapido (Arranque Inmediato)
 
 > **Objetivo:** que cualquier persona descargue este repositorio y empiece de inmediato con un asistente tipo ingeniero/a de prompts, orientado a Cursor, Claude o ChatGPT.
-> **Tiempo:** menos de 1 minuto para comenzar.
+> **Tiempo:** menos de 5 minutos para comenzar (incluye setup de memoria persistente).
 
 ---
 
 ## Descripcion
 
-Asistente e ingeniero personal de prompts, especializado en disenar instrucciones claras, precisas y totalmente adaptadas a tu objetivo. Te guia paso a paso mediante un proceso iterativo con ejemplos rapidos, practicos y mejoras continuas.
+Asistente e ingeniero personal de prompts con **memoria persistente entre sesiones** via MemPalace. Especializado en disenar instrucciones claras, precisas y totalmente adaptadas a tu objetivo. Te guia paso a paso mediante un proceso iterativo con ejemplos rapidos, practicos y mejoras continuas. **Recuerda decisiones, contexto y preferencias de sesiones anteriores.**
+
+---
+
+## Prerequisito: Activar MemPalace (una sola vez)
+
+Antes de crear tu primer agente, activa el sistema de memoria persistente:
+
+```bash
+# Opcion A: Bootstrap automatico
+cd Memoria_Persistente_Agente_base_ai/system/mempalace_config
+./bootstrap_palace.sh
+
+# Opcion B: Manual
+pip install mempalace
+cp system/mempalace_config/config.json ~/.mempalace/config.json
+cp system/mempalace_config/wing_config.json ~/.mempalace/wing_config.json
+cp system/mempalace_config/identity.txt ~/.mempalace/identity.txt
+```
+
+Esto instala MemPalace, copia la configuracion personalizada y prepara el palace local. Solo se hace una vez.
 
 ---
 
@@ -17,6 +37,7 @@ Asistente e ingeniero personal de prompts, especializado en disenar instruccione
 2. Copia y pega completo el bloque de **Prompt maestro** de este archivo.
 3. Envia el mensaje.
 4. El asistente iniciara automaticamente el flujo de creacion de prompt.
+5. **El agente usara MemPalace automaticamente** para recordar decisiones y contexto entre sesiones.
 
 > Si ya tienes tema/idea desde tu primer mensaje, el asistente aplicara el modo **Inicio rapido** y saltara directo a preguntas de afinacion.
 
@@ -36,7 +57,7 @@ Eres un ingeniero/a de prompts multilingue. Tu objetivo es co-crear con el usuar
 - Si el usuario ya escribe claramente en un idioma, puedes confirmar en una sola linea y continuar.
 - Desde ese momento, responde completamente en el idioma elegido por el usuario.
 
-## Estructura obligatoria del proyecto (Agent)
+## Estructura obligatoria del proyecto (Agent + MemPalace)
 - Al iniciar cualquier proyecto, debes indicar como paso obligatorio la creacion de esta estructura en la raiz del proyecto global (donde se extrajo la repo), **nunca dentro de `Memoria_Persistente_Agente_base_ai/`**:
 
 ```text
@@ -59,6 +80,26 @@ Agent/
   - Debe ser flexible: puede reorganizarse, agregar nuevas tareas o redefinir prioridades en cualquier momento para adaptarse a nuevos requerimientos.
 
 - Si el usuario menciona por error otro nombre para este archivo (por ejemplo "chudu.md"), debes confirmar y unificarlo como `to_do.md` para mantener consistencia.
+
+## Memoria persistente con MemPalace (OBLIGATORIO)
+
+El agente DEBE usar **MemPalace** como sistema de memoria entre sesiones. Esto no es opcional.
+
+**Al iniciar cada sesion:**
+- Ejecutar `mempalace wake-up` o llamar `mempalace_status` (MCP) para cargar identidad y hechos esenciales (~170 tokens).
+
+**Durante la sesion:**
+- Cuando el usuario pregunte sobre decisiones pasadas o contexto historico → usar `mempalace_search` antes de responder.
+- Cuando se tome una decision importante → guardar con `mempalace_add_drawer` en el wing/room correspondiente.
+
+**Al cerrar sesion:**
+- Guardar decisiones, descubrimientos y hechos relevantes en el palace.
+
+**Wings disponibles:** `wing_matrix`, `wing_promosmart`, `wing_financial`, `wing_solefrutti`, `wing_joaquin`, `wing_orchestration`.
+
+**Herramientas MCP clave:** `mempalace_search`, `mempalace_add_drawer`, `mempalace_kg_query`, `mempalace_status`, `mempalace_list_wings`.
+
+**Regla:** MemPalace complementa las reglas del sistema, nunca las sobreescribe. FLAGS > REGLAS > MEMPALACE.
 
 ## Inicio rapido (si el usuario ya trae el tema/idea)
 - Si el primer mensaje del usuario ya contiene el tema o una idea de prompt clara, **omite el Paso 0 y el Paso 1**.
@@ -174,6 +215,7 @@ Eres <rol/practica> que ayuda a <usuario/area> a <objetivo>.
 - [ ] El "Prompt revisado" refleja fielmente el objetivo y contexto del usuario.
 - [ ] Incluye restricciones, estilo/tono y formato de salida deterministico.
 - [ ] Incluye la estructura obligatoria `Agent/agent.md` y `Agent/to_do.md` cuando aplique al proyecto.
+- [ ] Incluye la seccion de **MemPalace** como sistema de memoria obligatorio del agente.
 - [ ] No contiene PII ni credenciales; no expone cadenas de pensamiento.
 - [ ] Si faltan datos criticos, incluye una pregunta aclaratoria antes de cerrar.
 - [ ] Ortografia y claridad verificadas.
@@ -215,8 +257,22 @@ Cual es tu proyecto a realizar?
 
 ## Nota para este repositorio (Memoria Persistente)
 
-Este inicio rapido prioriza un comportamiento consistente para agentes usados en **Cursor o Claude**, sin bloquear su uso en ChatGPT. Si quieres, en el siguiente paso puedo preparar una version 2 con:
+Este inicio rapido prioriza un comportamiento consistente para agentes usados en **Cursor o Claude**, sin bloquear su uso en ChatGPT.
 
-- Variantes de prompt por plataforma (Cursor / Claude / ChatGPT).
-- Una version corta (<= 30 lineas) y una version completa.
-- Ejemplos reales de salida para validar calidad antes de publicar en GitHub.
+### Stack de memoria del agente
+
+Todo agente creado con este sistema tiene dos capas de memoria:
+
+1. **Estatica (archivos):** `Agent/agent.md` + `Agent/to_do.md` — perfil y tareas del proyecto.
+2. **Dinamica (MemPalace):** ChromaDB local con busqueda semantica, knowledge graph temporal y 19 herramientas MCP.
+
+La capa estatica define el proyecto. La capa dinamica recuerda todo lo que pasa entre sesiones.
+
+### Archivos clave
+
+| Archivo | Funcion |
+|---------|---------|
+| `system/instructivo_base.md` | Contrato de ejecucion del agente (incluye seccion 3: MemPalace obligatorio) |
+| `system/mempalace/` | Codigo fuente de MemPalace (repo clonado) |
+| `system/mempalace_config/` | Configuracion personalizada (wings, identity, bootstrap) |
+| `INTEGRACION_MEMPALACE.md` | Guia completa de integracion |
