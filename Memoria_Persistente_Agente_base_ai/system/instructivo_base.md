@@ -212,6 +212,24 @@ El agente NO elige protocolos arbitrariamente. Debe activarlos según el **tipo 
 
 **Nota:** Este protocolo NO es opcional cuando hay herramientas. Es comportamiento del Kernel.
 
+### 5.5 Architecture Design (Diseño de Software)
+
+**Trigger:** Solicitudes de diseño de arquitectura, modelos de datos, límites de dominio, evaluación monolito vs microservicios, refactorización estructural.
+
+**Protocolo:** 7 pasos: Entender problema → Right-Sizing → Bounded Contexts → Dirección de dependencias → Failure-Aware Design → Observabilidad → Checklist anti-patrones.
+
+**Principio rector:** El sistema debe ser tan simple como el problema actual lo requiere. No diseñar para el futuro imaginado.
+
+**Combina con:**
+- `exploration: tree` (ToT) → explorar alternativas arquitectónicas
+- CoVe → validar decisión final
+- Documentar con ADR (Architecture Decision Record)
+
+→ **Implementación completa:** `system/llm_operating_rules.md`, PROTOCOLO: Architecture Design.  
+→ **Skill extendida:** `system/llms_prompts/claude-skills/Development/software-architecture-design/SKILL.md`
+
+**Nota:** Activado por Skill Pack `architecture_design_v1`. Siempre combinado con `depth=deep` y `task_type=decision`.
+
 ---
 
 ## 6. Output Lock (Formato Obligatorio)

@@ -303,3 +303,77 @@ Action: otra_herramienta(params) | finish(respuesta_final)
 3.  CoVe (si `task_type=decision`) → Verifica la respuesta final
 
 **Referencia técnica:** Ver `usuario/conocimiento_ai.md` sección 8.
+
+### ## PROTOCOLO: Architecture Design (Diseño de Software)
+
+**Trigger OBLIGATORIO:**
+- Solicitudes de diseño de arquitectura de sistema
+- Definición de modelos de datos o estructuras de dominio
+- Decisiones sobre separación de servicios o módulos
+- Refactorización de código legado hacia arquitectura limpia
+- Evaluación de trade-offs arquitectónicos
+
+**Tipo:** Skill Pack (`architecture_design_v1`) — Se activa con `task_type=decision` + contexto de diseño.
+
+**Principio rector:** El sistema debe ser tan simple como el problema actual lo requiere. No diseñar para el futuro imaginado.
+
+**Pasos obligatorios:**
+
+```text
+PASO 1 — Entender el problema real:
+- ¿Qué problema de negocio resuelve? (NO problema técnico)
+- ¿Cuál es el tamaño del equipo y la madurez operacional?
+- ¿Cuáles son los límites del sistema? (inputs, outputs, integraciones)
+
+PASO 2 — Right-Sizing:
+- Equipo 1-5 / producto único → Monolito modular
+- Múltiples equipos con deploys independientes → Evaluar separación
+- Parte que escala 100x más que el resto → Extraer ese módulo
+- En caso de duda → empezar más simple
+
+PASO 3 — Definir límites de dominio (Bounded Contexts):
+- Identificar el Core Domain (lo que diferencia al negocio)
+- Identificar Supporting Domains (necesarios, no diferenciadores)
+- Identificar Generic Domains (usar SaaS/servicios externos)
+- Solo separar dominios si tienen equipos, ciclos de vida o escala distintos
+
+PASO 4 — Establecer dirección de dependencias:
+- Infraestructura → Aplicación → Dominio Core
+- El Core NUNCA depende de infraestructura
+- Usar interfaces/ports para aislar dependencias externas
+
+PASO 5 — Diseño failure-aware:
+- Para cada operación crítica: definir qué falla y cómo se maneja
+- Patrones de compensación para operaciones distribuidas (Saga)
+- Niveles de degradación explícitos
+
+PASO 6 — Observabilidad integrada:
+- Correlation IDs desde el borde del sistema
+- Logs estructurados con contexto completo
+- SLIs/SLOs definidos antes de producción
+
+PASO 7 — Checklist anti-patrones:
+□ ¿Hay over-engineering o abstraction theater?
+□ ¿Los microservicios están justificados (equipo/escala/dominio)?
+□ ¿Las capas de abstracción aportan valor real?
+□ ¿Hay repositorios innecesarios wrapeando ORMs?
+```
+
+**Reglas críticas:**
+- Usar `exploration: tree` (ToT) para comparar alternativas arquitectónicas
+- CoVe es OBLIGATORIO para validar la decisión final de arquitectura
+- Documentar la decisión con ADR (Architecture Decision Record)
+- NUNCA asumir microservicios sin criterios objetivos
+
+**Documentación de decisión (ADR):**
+```markdown
+# ADR-XXX: [Título]
+## Fecha: YYYY-MM-DD
+## Estado: [Propuesto | Aceptado | Deprecado]
+## Contexto: [Problema que requiere decisión]
+## Decisión: [Qué se decidió y por qué]
+## Consecuencias: [Trade-offs, ganancias, riesgos]
+## Alternativas consideradas: [Opciones descartadas]
+```
+
+**Referencia técnica:** Ver `usuario/conocimiento_ai.md` sección 10 (Architecture Design).
