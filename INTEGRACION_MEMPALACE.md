@@ -64,7 +64,7 @@ MemPalace es un sistema de memoria vectorial local para LLMs:
 
 ```bash
 # Opción A: Ejecutar bootstrap automático
-cd Memoria_Persistente_Agente_base_ai/system/mempalace_config
+cd Persistent_Memory_Agent_Base_AI/system/mempalace_config
 ./bootstrap_palace.sh
 
 # Opción B: Manual paso a paso
@@ -170,7 +170,7 @@ Orden de carga con MemPalace:
 ## 8. Estructura de archivos
 
 ```
-Memoria_Persistente_Agente_base_ai/
+Persistent_Memory_Agent_Base_AI/
 ├── INICIO_RAPIDO.md                    ← Incluye sección MemPalace obligatoria
 ├── INTEGRACION_MEMPALACE.md            ← Este archivo
 ├── system/

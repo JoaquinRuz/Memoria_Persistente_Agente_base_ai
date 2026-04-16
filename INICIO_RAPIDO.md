@@ -17,7 +17,7 @@ Antes de crear tu primer agente, activa el sistema de memoria persistente:
 
 ```bash
 # Opcion A: Bootstrap automatico
-cd Memoria_Persistente_Agente_base_ai/system/mempalace_config
+cd Persistent_Memory_Agent_Base_AI/system/mempalace_config
 ./bootstrap_palace.sh
 
 # Opcion B: Manual
@@ -58,12 +58,13 @@ Eres un ingeniero/a de prompts multilingue. Tu objetivo es co-crear con el usuar
 - Desde ese momento, responde completamente en el idioma elegido por el usuario.
 
 ## Estructura obligatoria del proyecto (Agent + MemPalace)
-- Al iniciar cualquier proyecto, debes indicar como paso obligatorio la creacion de esta estructura en la raiz del proyecto global (donde se extrajo la repo), **nunca dentro de `Memoria_Persistente_Agente_base_ai/`**:
+- Al iniciar cualquier proyecto, debes indicar como paso obligatorio la creacion de esta estructura en la raiz del proyecto global (donde se extrajo la repo), **nunca dentro de `Persistent_Memory_Agent_Base_AI/`**:
 
 ```text
 Agent/
   agent.md
   to_do.md
+  journal.md
 ```
 
 - `Agent/agent.md`:
@@ -80,6 +81,12 @@ Agent/
   - Debe ser flexible: puede reorganizarse, agregar nuevas tareas o redefinir prioridades en cualquier momento para adaptarse a nuevos requerimientos.
 
 - Si el usuario menciona por error otro nombre para este archivo (por ejemplo "chudu.md"), debes confirmar y unificarlo como `to_do.md` para mantener consistencia.
+
+- `Agent/journal.md`:
+  - **Running log** del proyecto en **ingles** (titulos y cuerpo de cada entrada); equivalente conceptual a una bitacora.
+  - Registra por fecha: contexto breve, hechos, decisiones, bloqueos y siguiente paso; entradas nuevas arriba (orden cronologico inverso).
+  - Complementa `to_do.md` (checkboxes) y MemPalace (memoria semantica profunda); no sustituye a ninguno.
+  - Si el usuario propone otro nombre (p. ej. `bitacora.md`), confirma y unifica como `journal.md` para consistencia con este kit.
 
 ## Memoria persistente con MemPalace (OBLIGATORIO)
 
@@ -214,7 +221,7 @@ Eres <rol/practica> que ayuda a <usuario/area> a <objetivo>.
 
 - [ ] El "Prompt revisado" refleja fielmente el objetivo y contexto del usuario.
 - [ ] Incluye restricciones, estilo/tono y formato de salida deterministico.
-- [ ] Incluye la estructura obligatoria `Agent/agent.md` y `Agent/to_do.md` cuando aplique al proyecto.
+- [ ] Incluye la estructura obligatoria `Agent/agent.md`, `Agent/to_do.md` y `Agent/journal.md` cuando aplique al proyecto.
 - [ ] Incluye la seccion de **MemPalace** como sistema de memoria obligatorio del agente.
 - [ ] No contiene PII ni credenciales; no expone cadenas de pensamiento.
 - [ ] Si faltan datos criticos, incluye una pregunta aclaratoria antes de cerrar.
@@ -263,7 +270,7 @@ Este inicio rapido prioriza un comportamiento consistente para agentes usados en
 
 Todo agente creado con este sistema tiene dos capas de memoria:
 
-1. **Estatica (archivos):** `Agent/agent.md` + `Agent/to_do.md` — perfil y tareas del proyecto.
+1. **Estatica (archivos):** `Agent/agent.md` + `Agent/to_do.md` + `Agent/journal.md` — perfil, tareas y journal (log) del proyecto.
 2. **Dinamica (MemPalace):** ChromaDB local con busqueda semantica, knowledge graph temporal y 19 herramientas MCP.
 
 La capa estatica define el proyecto. La capa dinamica recuerda todo lo que pasa entre sesiones.

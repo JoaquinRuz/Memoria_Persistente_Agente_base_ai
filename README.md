@@ -25,7 +25,7 @@ El agente no actúa libremente. **Opera bajo sistema.**
 ## Estructura del Proyecto
 
 ```
-Memoria_Persistente_Agente_base_ai/        ← Carpeta principal (arrastra esta carpeta a tu proyecto)
+Persistent_Memory_Agent_Base_AI/        ← Carpeta principal (arrastra esta carpeta a tu proyecto)
 ├── INICIO_RAPIDO.md                       ← Guía de onboarding paso a paso
 │
 ├── system/                                ← Kernel del sistema (obligatorio)
@@ -46,14 +46,15 @@ Memoria_Persistente_Agente_base_ai/        ← Carpeta principal (arrastra esta 
 
 ## Cómo usar
 
-> **Primera vez?** Abre [`Memoria_Persistente_Agente_base_ai/INICIO_RAPIDO.md`](Memoria_Persistente_Agente_base_ai/INICIO_RAPIDO.md) para una guía paso a paso con setup interactivo.
+> **Primera vez?** Abre [`INICIO_RAPIDO.md`](INICIO_RAPIDO.md) para una guía paso a paso con setup interactivo.
 
 1. **Clona** el repo
-2. **Arrastra** la carpeta `Memoria_Persistente_Agente_base_ai/` a tu proyecto
-3. **Configura** tu carpeta `usuario/` (ver instrucciones en `INICIO_RAPIDO.md`)
-4. **Carga** los archivos de `system/` como contexto en tu LLM favorito
-5. **Inicia sesión** con Context Flags
-6. El agente operará bajo el sistema definido
+2. **Arrastra** la carpeta `Persistent_Memory_Agent_Base_AI/` a tu proyecto
+3. **Crea** en la raíz del proyecto anfitrión la carpeta `Agent/` con `agent.md`, `to_do.md` y `journal.md` (detalle en `INICIO_RAPIDO.md`)
+4. **Configura** tu carpeta `usuario/` (ver instrucciones en `INICIO_RAPIDO.md`)
+5. **Carga** los archivos de `system/` como contexto en tu LLM favorito
+6. **Inicia sesión** con Context Flags
+7. El agente operará bajo el sistema definido
 
 ## Protocolos Implementados
 
@@ -93,7 +94,7 @@ Para configurar tu propia instancia:
 2. Completa con tu información
 3. Crea los archivos adicionales según tu contexto (business context, proyectos, etc.)
 
-Ver [`usuario/README.md`](Memoria_Persistente_Agente_base_ai/usuario/README.md) para la estructura completa.
+Ver [`usuario/README.md`](usuario/README.md) para la estructura completa.
 
 ## Colección de Prompts y Skills
 
