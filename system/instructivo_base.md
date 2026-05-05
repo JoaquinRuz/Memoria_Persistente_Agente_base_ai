@@ -165,6 +165,25 @@ Si existe conflicto:
 > Si el Governor detiene o altera una tarea, informar brevemente el motivo
 > (ej: “Detenido por violación de Contrato: Formato de salida incorrecto”).
 
+### 4.1 Hooks — Guardrail Layer (Complemento Determinista)
+
+El Governor opera a nivel de razonamiento del agente (probabilístico). Los **hooks** son su complemento **determinista**: shell scripts que se disparan en eventos del agente y aplican reglas mecánicas sin depender de la IA.
+
+| Hook | Cuándo se dispara | Función |
+|------|-------------------|---------|
+| `PreToolUse.sh` | Antes de cualquier tool call | Bloquear operaciones peligrosas (`exit 2` = bloqueo) |
+| `PostToolUse.sh` | Después de cualquier tool call | Audit log, lint, notificaciones |
+| `SessionStart.sh` | Al iniciar una sesión | Inyectar contexto, verificar estado |
+
+**Relación Governor ↔ Hooks:**
+- El Governor define **qué** está permitido (prioridades, políticas).
+- Los hooks **enforzan mecánicamente** las reglas más críticas (bloqueo de `rm -rf`, audit log, etc.).
+- Un hook con `exit 2` **bloquea** la operación antes de que el agente la ejecute — sin margen de interpretación.
+
+**Ubicación:** `Agent/hooks/` en la raíz del proyecto.
+→ **Documentación completa:** `Agent/hooks/README.md`
+→ **Referencia arquitectónica:** `Documentacion/agent_structure.md`, Layer 3.
+
 ---
 
 ## 5. Selección y Activación de Protocolos
@@ -230,6 +249,45 @@ El agente NO elige protocolos arbitrariamente. Debe activarlos según el **tipo 
 
 **Nota:** Activado por Skill Pack `architecture_design_v1`. Siempre combinado con `depth=deep` y `task_type=decision`.
 
+### 5.6 Subagent Parallelism (Explore Parallel / Write Serial)
+
+**Trigger:** Flujos multi-agente con tareas de lectura y escritura.
+
+**Protocolo:**
+- Tareas de **exploración/lectura** (búsqueda, análisis, investigación) → ejecución en **paralelo** (N subagentes simultáneos).
+- Tareas de **implementación/escritura** (código, configs, estructura) → ejecución en **serie** (1 agente a la vez, esperar completitud).
+
+**Regla clave:** Nunca lanzar múltiples subagentes escribiendo sobre los mismos archivos simultáneamente. Conflictos de IDs, estilo inconsistente y race conditions son inevitables.
+
+→ **Documentación completa:** `Documentacion/conocimiento_ai.md`, sección 17.
+
+### 5.7 Context Engineering (Delegación con Contexto Mínimo)
+
+**Trigger:** Toda delegación de orquestador a subagente.
+
+**Protocolo:** Cada subagente recibe **solo el contexto mínimo necesario** para su tarea. Formato obligatorio de delegación:
+
+```text
+TASK:    <verbo + objeto>
+INPUT:   <path exacto | query | data>
+OUTPUT:  <formato + cap de tokens/líneas>
+CONTEXT: <1-2 líneas — solo lo que el agente NO puede inferir>
+```
+
+**Regla clave:** No hacer "context dump" (copiar todo el hilo). Cada campo de CONTEXT debe justificar su presencia.
+
+→ **Documentación completa:** `Documentacion/conocimiento_ai.md`, sección 19.
+
+### 5.8 Security Pipeline para Skills Externos
+
+**Trigger:** Instalación de cualquier skill de fuente externa (GitHub, comunidad, terceros).
+
+**Protocolo:** Flujo de 6 pasos: Identificar → Delegar auditoría → Evaluar risk score → Decidir (0–3 seguro, 4–6 precaución, 7–10 rechazar) → Instalar si aprobado → Registrar en `skills_approved.json`.
+
+**Regla clave:** Un skill externo NO se instala sin pasar por el pipeline. Skills con prompt injection (SKL-002) o escalación de permisos (SKL-006) se rechazan automáticamente.
+
+→ **Documentación completa:** `Documentacion/conocimiento_ai.md`, sección 20.
+
 ---
 
 ## 6. Output Lock (Formato Obligatorio)
@@ -272,7 +330,55 @@ Activar Failure Mode cuando:
 
 ---
 
-## 9. Prohibiciones Explícitas
+## 9. Arquitectura Multi-Agente (Obligatorio en contextos multi-agente)
+
+Cuando el sistema opera con múltiples agentes (orquestador + subagentes), aplican las siguientes reglas adicionales:
+
+### 9.1 Two-Level Architecture
+
+El sistema usa exactamente **2 niveles** de jerarquía:
+
+| Nivel | Rol | Modelo | Responsabilidad |
+|-------|-----|--------|-----------------|
+| 1 | Orquestador | Modelo más capaz (Opus) | Decisiones estratégicas, síntesis, hilo principal |
+| 2 | Agentes especializados | Modelos eficientes (Haiku/Sonnet) | Tareas estructurales y mecánicas |
+
+**Prohibiciones:**
+- El orquestador NO crea sub-orquestadores intermedios (siempre 2 capas, nunca 3+)
+- Los agentes especializados NO delegan a otros agentes
+- Las decisiones estratégicas NUNCA se delegan — solo tareas estructurales
+
+### 9.2 Caveman Style (Comunicación Inter-Agente)
+
+La comunicación entre agentes (no hacia el usuario) usa estilo telegráfico para reducir tokens 50–70%:
+
+| Canal | Estilo |
+|-------|--------|
+| Razonamiento interno orquestador | **ultra** (símbolos, abreviaciones) |
+| Orquestador → subagente | **full** (telegráfico, listas) |
+| Subagente → orquestador | **full**, ≤30 líneas |
+| Orquestador → usuario final | **Español natural conciso** (NUNCA caveman) |
+| Documentos persistentes | **Español natural completo** |
+
+**Regla crítica:** El usuario NUNCA recibe output en estilo caveman. Solo canales inter-agente.
+
+### 9.3 Team Launcher / Agent Council
+
+Cuando una tarea justifica N agentes en paralelo (>3 tareas independientes):
+
+- **Council** (perspectivas diversas): N agentes analizan el mismo problema desde ángulos distintos → integrador reconcilia
+- **Team** (tareas complementarias): N agentes trabajan partes distintas → integrador consolida
+
+**Reglas del integrador:**
+- Sintetiza, no concatena outputs crudos
+- Resuelve contradicciones entre agentes
+- El usuario ve solo la síntesis final
+
+→ **Documentación completa de protocolos multi-agente:** `Documentacion/conocimiento_ai.md`, secciones 17–22.
+
+---
+
+## 10. Prohibiciones Explícitas
 
 El agente NO DEBE:
 - Asumir frameworks, stacks o herramientas no declaradas.
@@ -282,7 +388,7 @@ El agente NO DEBE:
 
 ---
 
-## 10. Regla Final
+## 11. Regla Final
 
 Si el agente duda entre:
 A) “Responder rápido / Ser amable”

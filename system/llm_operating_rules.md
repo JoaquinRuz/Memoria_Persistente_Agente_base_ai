@@ -377,3 +377,192 @@ PASO 7 — Checklist anti-patrones:
 ```
 
 **Referencia técnica:** Ver `usuario/conocimiento_ai.md` sección 10 (Architecture Design).
+
+### ## PROTOCOLO: Subagent Parallelism (Explore Parallel / Write Serial)
+
+**Trigger:** Flujo multi-agente donde existen tareas de lectura/investigación y de escritura/implementación.
+
+**Tipo:** Kernel Protocol Multi-Agente (OBLIGATORIO en contextos multi-agente).
+
+**Regla central:**
+
+```text
+EXPLORACIÓN (paralelo):
+  → Lectura de archivos, búsqueda en codebase, investigación → N subagentes simultáneos
+  → Generación de resúmenes, notas → paralelo permitido
+
+IMPLEMENTACIÓN (serie):
+  → Escritura de código, modificación de configs → 1 agente a la vez
+  → Generación de estructuras de directorios → esperar completitud antes del siguiente
+```
+
+**Pasos obligatorios:**
+
+1.  **Clasificar tareas**: Separar en exploración vs implementación.
+2.  **Fase exploración**: Lanzar subagentes explore/generalPurpose en paralelo (1 mensaje, N tool calls).
+3.  **Sintetizar**: El orquestador sintetiza resultados de exploración.
+4.  **Fase implementación**: Ejecutar pasos de escritura en serie, esperando completitud de cada uno.
+
+**Reglas críticas:**
+- NUNCA lanzar múltiples subagentes escribiendo sobre los mismos archivos simultáneamente.
+- La exploración se paraleliza siempre que las tareas sean independientes entre sí.
+- Cada subagente de exploración tiene output cap (≤30 líneas o especificado por tarea).
+
+**Referencia técnica:** Ver `Documentacion/conocimiento_ai.md` sección 17.
+
+### ## PROTOCOLO: Two-Level Architecture (Supervisor Pattern)
+
+**Trigger:** Todo sistema con más de 1 agente operando.
+
+**Tipo:** Kernel Protocol Multi-Agente (OBLIGATORIO).
+
+**Estructura fija:**
+
+```text
+NIVEL 1 — ORQUESTADOR (1 instancia, modelo más capaz):
+  → Mantiene hilo completo de conversación
+  → Toma TODAS las decisiones estratégicas
+  → Sintetiza outputs de subagentes antes de mostrar al usuario
+  → Define qué tarea va a qué subagente
+
+NIVEL 2 — AGENTES ESPECIALIZADOS (N instancias, modelos eficientes):
+  → Ejecutan tareas estructurales y mecánicas
+  → Devuelven output compacto (≤cap definido)
+  → NO toman decisiones estratégicas
+  → NO delegan a otros agentes
+```
+
+**Reglas críticas:**
+- Exactamente 2 niveles. NUNCA 3+. El orquestador NO crea sub-orquestadores.
+- Output del subagente siempre tiene cap explícito.
+- El usuario NUNCA ve output crudo de un subagente — siempre síntesis del orquestador.
+- Decisiones estratégicas = orquestador. Tareas mecánicas = subagentes.
+
+**Criterio de delegación:**
+
+| Tipo | Ejecuta | Modelo |
+|------|---------|--------|
+| Síntesis, decisión, escritura creativa | Orquestador | Capaz (Opus) |
+| Ingesta, auditoría, find/lookup | Especializado | Eficiente (Haiku) |
+| Investigación abierta | Genérico | Medio (Sonnet) |
+| Modificación de state global | Orquestador + confirmación usuario | Capaz |
+
+**Referencia técnica:** Ver `Documentacion/conocimiento_ai.md` sección 18.
+
+### ## PROTOCOLO: Context Engineering
+
+**Trigger:** Toda delegación de tarea del orquestador a un subagente.
+
+**Tipo:** Kernel Protocol Multi-Agente (OBLIGATORIO).
+
+**Principio:** Cada subagente recibe **solo el contexto mínimo necesario**. Nada más.
+
+**Formato obligatorio de delegación:**
+
+```text
+TASK:    <verbo + objeto — 1 frase imperativa>
+INPUT:   <path exacto | query | data mínima>
+OUTPUT:  <formato + cap de líneas/tokens>
+CONTEXT: <1-2 líneas — solo lo que el agente NO puede inferir>
+```
+
+**Dimensiones a controlar:**
+
+| Dimensión | Regla |
+|-----------|-------|
+| Tamaño | Cap explícito en output (ej: `≤30 líneas`) |
+| Relevancia | Solo contexto que el agente NO puede inferir |
+| Temporalidad | No enviar decisiones obsoletas sin validar |
+| Alcance | Contexto de la tarea, no del proyecto entero |
+
+**Anti-patrones (prohibidos):**
+- Context dump (copiar todo el hilo al subagente).
+- Sin output cap (el subagente devuelve miles de tokens sin límite).
+- Contexto implícito ("el archivo que vimos antes" — paths deben ser explícitos).
+
+**Referencia técnica:** Ver `Documentacion/conocimiento_ai.md` sección 19.
+
+### ## PROTOCOLO: Security Pipeline (Skills Externos)
+
+**Trigger:** Instalación de cualquier skill de fuente externa.
+
+**Tipo:** Protocolo de Gobernanza (OBLIGATORIO para skills externos).
+
+**Flujo obligatorio (6 pasos):**
+
+```text
+1. IDENTIFICAR  → URL / nombre del skill
+2. DELEGAR      → Enviar a agente Cyber_Security para auditoría
+3. EVALUAR      → Recibir risk score (0-10) + clasificación
+4. DECIDIR      → 0–3: aprobar | 4–6: manual | 7–10: rechazar
+5. INSTALAR     → Copiar a Skills/ + registrar en skills_approved.json
+6. LOGEAR       → Fecha, fuente, score, asignación
+```
+
+**Patrones peligrosos (rechazo automático si detectados):**
+- SKL-001b: Hooks con egreso de red / acceso a credenciales → **Crítico**
+- SKL-002: Prompt injection (`"ignore previous"`, `"you are now"`) → **Crítico**
+- SKL-006: Escalación de permisos (`sudo`, `chmod 777`) → **Alto**
+
+**Regla crítica:** Un skill externo NO se instala sin pasar por este pipeline. Sin excepciones.
+
+**Referencia técnica:** Ver `Documentacion/conocimiento_ai.md` sección 20.
+
+### ## PROTOCOLO: Caveman Style (Comunicación Inter-Agente)
+
+**Trigger:** Toda comunicación entre agentes (NO hacia el usuario final).
+
+**Tipo:** Estándar de comunicación (OBLIGATORIO en canales inter-agente).
+
+**Niveles:**
+
+| Nivel | Aplicación | Reducción |
+|-------|-----------|-----------|
+| **lite** | Drop artículos + filler | ~20% |
+| **full** | + telegráfico + listas | ~50% |
+| **ultra** | + símbolos + abreviaciones | ~70% |
+
+**Aplicación por canal:**
+
+| Canal | Nivel |
+|-------|-------|
+| Razonamiento interno orquestador | ultra |
+| Orquestador → subagente | full |
+| Subagente → orquestador (≤30 líneas) | full |
+| Orquestador → usuario | **español natural** (NUNCA caveman) |
+| Documentos persistentes (wiki, docs) | **español natural completo** |
+
+**Reglas:**
+- Preservar intacto: código, paths, URLs, números, nombres propios.
+- Drop: artículos, filler, hedging.
+- Símbolos: `→` (entonces), `&` (y), `✓/✗` (éxito/fallo), `🔴🟡🟢` (prioridad).
+
+**Referencia técnica:** Ver `Documentacion/conocimiento_ai.md` sección 21.
+
+### ## PROTOCOLO: Team Launcher / Agent Council
+
+**Trigger:** Tarea que justifica >3 subagentes independientes en paralelo.
+
+**Tipo:** Protocolo de Orquestación Multi-Agente (OPCIONAL — usar cuando justificado).
+
+**Variantes:**
+
+```text
+COUNCIL (perspectivas diversas):
+  N agentes analizan el MISMO problema desde ángulos distintos.
+  Integrador reconcilia visiones y emite veredicto.
+
+TEAM (tareas complementarias):
+  N agentes trabajan PARTES DISTINTAS de una tarea grande.
+  Integrador consolida las piezas en un output unificado.
+```
+
+**Reglas del integrador:**
+1.  Sintetiza — NUNCA concatena outputs crudos.
+2.  Identifica y resuelve contradicciones.
+3.  Declara veredicto (council) o consolida (team).
+4.  El usuario ve solo la síntesis final.
+
+**Condición mínima de uso:** >3 tareas genuinamente independientes con beneficio real de paralelización. No usar para 1-2 tareas simples.
+
+**Referencia técnica:** Ver `Documentacion/conocimiento_ai.md` sección 22.
